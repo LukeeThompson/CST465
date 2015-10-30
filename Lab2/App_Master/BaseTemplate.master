@@ -1,0 +1,31 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="BaseTemplate.master.cs" Inherits="Lab2.App_Master.BaseTemplate" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/LameStyle.css" />
+    <title><asp:ContentPlaceHolder ID="title" runat="server" /></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<header>
+    <asp:ContentPlaceHolder ID="header" runat="server"></asp:ContentPlaceHolder>
+    <h1>LameGames.com</h1>
+    <h2>A Place For Awfulness</h2>
+</header>
+<nav>
+    <asp:ContentPlaceHolder ID="nav" runat="server"></asp:ContentPlaceHolder>
+</nav>
+<main>
+    <asp:ContentPlaceHolder ID="main" runat="server"></asp:ContentPlaceHolder>
+</main>
+<footer>
+    <asp:ContentPlaceHolder ID="footer" runat="server"></asp:ContentPlaceHolder>
+    LameGames.com produced by Luke Thompson 2015
+</footer>
+
+</body>
+
+</html>

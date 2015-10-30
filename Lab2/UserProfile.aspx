@@ -1,8 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserProfile.aspx.cs" Inherits="Lab2.UserProfile" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserProfile.aspx.cs" Inherits="Lab2.UserProfile" MasterPageFile="~/App_Master/BaseTemplate.master"%>
 
-<!DOCTYPE html>
+<%--<!DOCTYPE html>--%>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<%--<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>User Profile Page</title>
 
@@ -20,30 +20,32 @@ function validateFile(sender, args) {
 }    
 </script>
 </head>
-<body>
+<body>--%>
+
+    <asp:Content ContentPlaceHolderID="main" runat="server">
     <h1>User Profile Information</h1>
     <form id="form1" runat="server">
     <div>
     <asp:multiview id="multiview" ActiveViewIndex="0" runat="server">
         <asp:View runat="server">
-        <label>First Name</label>
+        <label>First Name</label><br />
     <input type="text" id="uxFname" runat="server" required/> <br />
-        <label>Last Name</label>
+        <label>Last Name</label><br />
     <input type="text" id="uxLname" runat="server" required/> <br />
-        <label>Age</label>
-    <input type="number" min="0" max="200" id="uxAge" runat="server" required/> <br />
-            <label>Phone</label>
+        <label>Age</label><br />
+    <input type="number" min="0" max="200" id="uxAge" width="50px" runat="server" required/> <br />
+            <label>Phone</label><br />
     <input type="text" id="uxPhone" runat="server" required/> <br />
-            <label>E-Mail</label>
+            <label>E-Mail</label><br />
     <asp:TextBox id="uxEmail" runat="server"/> <br />
-            <label>Confirm E-mail</label>
+            <label>Confirm E-mail</label><br />
     <asp:TextBox id="uxConfirmEmail" runat="server"/>
     <asp:CompareValidator ID="emailvalidator" ControlToValidate="uxEmail" ControlToCompare="uxConfirmEmail" Type="String" Operator="Equal" ErrorMessage="E-mail addresses don't match." runat="server" /> <br />
-            <asp:Label AssociatedControlID="uxAddress" Text="Address" runat="server" />
+    <asp:Label AssociatedControlID="uxAddress" Text="Address" runat="server" /><br />
     <asp:TextBox id="uxAddress" runat="server"/> <br />
-        <asp:Label AssociatedControlID="uxCity" Text="City" runat="server" />
+        <asp:Label AssociatedControlID="uxCity" Text="City" runat="server" /><br />
     <asp:TextBox id="uxCity" runat="server"/> <br />
-            <asp:Label AssociatedControlID="uxState" Text="State" runat="server" />
+            <asp:Label AssociatedControlID="uxState" Text="State" runat="server" /> <br />
     <asp:DropDownList ID="uxState" AutoPostBack="false" runat="server">
         <asp:ListItem
                 Enabled="True"
@@ -63,16 +65,17 @@ function validateFile(sender, args) {
                 Text="Washington"
                 Value="WA"
             />
-        </asp:DropDownList>
-            <asp:Label AssociatedControlID="uxZipCode" Text="Zip" runat="server" />
-    <asp:TextBox id="uxZipCode" runat="server"/>
+        </asp:DropDownList> <br />
+            <asp:Label AssociatedControlID="uxZipCode" Text="Zip" runat="server" /><br />
+    <asp:TextBox id="uxZipCode" runat="server"/><br />
     <asp:RegularExpressionValidator id="zipvalidator" ControlToValidate="uxZipCode" ValidationExpression="\d{5}(\-\d{4})?" ErrorMessage="Invalid Zip Code." runat="server"/> <br />
         <label>Profile Picture</label>
         <asp:FileUpload ID="uxImageUpload" runat="server" /> <br />
-        <asp:CustomValidator ID="CustomValidator" ErrorMessage="Invalid Image." ControlToValidate="uxImageUpload" OnServerValidate="validateFile" runat="server" />
+        <asp:CustomValidator ID="CustomValidator" ErrorMessage="Invalid Image." ControlToValidate="uxImageUpload" OnServerValidate="validateFile" runat="server" /> <br />
             <asp:Button ID="uxSubmit" Text="Save Profile" OnClick="uxSubmit_Click" runat="server" /> <br />
         <asp:ValidationSummary ID="summary" ShowMessageBox="true" DisplayMode="BulletList" runat="server" />
         </asp:View>
+
         <asp:View runat="server">
             <strong>Name: </strong>
             <asp:Literal ID="lFname" runat="server"/>
@@ -95,5 +98,7 @@ function validateFile(sender, args) {
     </asp:multiview>
     </div>
     </form>
-</body>
-</html>
+    </asp:Content>
+
+<%--</body>
+</html>--%>
