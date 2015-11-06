@@ -1,27 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserProfile.aspx.cs" Inherits="Lab2.UserProfile" MasterPageFile="~/App_Master/BaseTemplate.master"%>
 
-<%--<!DOCTYPE html>--%>
-
-<%--<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>User Profile Page</title>
-
-<script type="text/javascript">       
-function validateFile(sender, args) {            
-    var allowedExtensions = ['jpg', 'gif', 'png'];            
-    var fileExtension = args.Value.split(/(\.)/g).pop();            
-    
-    args.IsValid = false;            
-    for (var i = 0; i < allowedExtensions.length; i++) {               
-        if (fileExtension == allowedExtensions[i]) {                   
-            args.IsValid = true;                
-        }            
-    }       
-}    
-</script>
-</head>
-<body>--%>
-
     <asp:Content ContentPlaceHolderID="main" runat="server">
     <h1>User Profile Information</h1>
     <form id="form1" runat="server">
@@ -99,6 +77,3 @@ function validateFile(sender, args) {
     </div>
     </form>
     </asp:Content>
-
-<%--</body>
-</html>--%>

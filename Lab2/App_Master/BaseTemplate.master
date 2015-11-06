@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <link rel="stylesheet" type="text/css" href="css/LameStyle.css" />
+    <link rel="stylesheet" type="text/css" href="/css/LameStyle.css" />
     <title><asp:ContentPlaceHolder ID="title" runat="server" /></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -14,11 +14,18 @@
     <asp:ContentPlaceHolder ID="header" runat="server"></asp:ContentPlaceHolder>
     <h1>LameGames.com</h1>
     <h2>A Place For Awfulness</h2>
+    
 </header>
 <nav>
     <asp:ContentPlaceHolder ID="nav" runat="server"></asp:ContentPlaceHolder>
 </nav>
 <main>
+    <form runat="server">
+        <div position="absolute" align="right">
+           <asp:LoginStatus logintext="Login"  runat="server" LogoutPageUrl="Login.aspx" />
+        </div>
+    <asp:ContentPlaceHolder ID="form" runat="server"></asp:ContentPlaceHolder>
+    </form>
     <asp:ContentPlaceHolder ID="main" runat="server"></asp:ContentPlaceHolder>
 </main>
 <footer>
