@@ -10,7 +10,8 @@
 <asp:Content ID="Content5" ContentPlaceHolderID="form" runat="server">
 </asp:Content>
 <asp:Content ID="Content6" ContentPlaceHolderID="main" runat="server">
-    Welcome to LameGames.com!
+    <h1>Support</h1><br />
+    If you are having trouble using one of our products, or our website, you've come to the right place!
 </asp:Content>
 <asp:Content ID="Content7" ContentPlaceHolderID="footer" runat="server">
 </asp:Content>

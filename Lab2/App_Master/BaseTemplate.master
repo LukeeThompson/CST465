@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<head runat="server">
     <link rel="stylesheet" type="text/css" href="/css/LameStyle.css" />
     <title><asp:ContentPlaceHolder ID="title" runat="server" /></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -11,10 +11,9 @@
 </head>
 <body>
 <header>
-    <asp:ContentPlaceHolder ID="header" runat="server"></asp:ContentPlaceHolder>
     <h1>LameGames.com</h1>
     <h2>A Place For Awfulness</h2>
-    
+    <asp:ContentPlaceHolder ID="header" runat="server"></asp:ContentPlaceHolder>
 </header>
 <nav>
     <asp:ContentPlaceHolder ID="nav" runat="server"></asp:ContentPlaceHolder>
@@ -24,7 +23,11 @@
         <div position="absolute" align="right">
            <asp:LoginStatus logintext="Login"  runat="server" LogoutPageUrl="Login.aspx" />
         </div>
-    <asp:ContentPlaceHolder ID="form" runat="server"></asp:ContentPlaceHolder>
+
+        <asp:SiteMapDataSource ID="uxDataSource" StartingNodeUrl="/Default.aspx" ShowStartingNode="false" runat="server" />
+        <asp:Menu CssClass="MenuClass" Orientation="Horizontal" DataSourceID="uxDataSource" ForeColor="#333A26" DynamicHoverStyle-ForeColor="#728C43" DynamicMenuStyle-ForeColor="#365301" StaticHoverStyle-ForeColor="#728C43" StaticMenuStyle-ForeColor="#365301" StaticSelectedStyle-ForeColor="#365301" runat="server" /> <br />
+        <asp:SiteMapPath PathSeparator="->" runat="server" /> <br /> <br />
+        <asp:ContentPlaceHolder ID="form" runat="server"></asp:ContentPlaceHolder>
     </form>
     <asp:ContentPlaceHolder ID="main" runat="server"></asp:ContentPlaceHolder>
 </main>

@@ -13,6 +13,7 @@
             <p>You've come to the wrong neighborhood! Please Log in to continue.</p>
         </AnonymousTemplate>
         <LoggedInTemplate>
+            <h1>Blog</h1>
             <label>Title</label> <br />
             <asp:TextBox ID="uxBlogTitle" runat="server" /> <br />
             <label>Your post</label> <br />

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/App_Master/BaseTemplate.master" AutoEventWireup="true" CodeBehind="Support.aspx.cs" Inherits="Lab2.Support" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/App_Master/BaseTemplate.master" AutoEventWireup="true" CodeBehind="Products.aspx.cs" Inherits="Lab2.Products" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
@@ -10,7 +10,8 @@
 <asp:Content ID="Content5" ContentPlaceHolderID="form" runat="server">
 </asp:Content>
 <asp:Content ID="Content6" ContentPlaceHolderID="main" runat="server">
-    Welcome to LameGames.com!
+    <h1>Products</h1>
+    Coming Soon!
 </asp:Content>
 <asp:Content ID="Content7" ContentPlaceHolderID="footer" runat="server">
 </asp:Content>
