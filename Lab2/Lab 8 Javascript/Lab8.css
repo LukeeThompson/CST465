@@ -1,0 +1,25 @@
+﻿#calculator{
+    background-color: #cdcdcd;
+    border: solid 1px #333;
+    border-radius: 10px;
+    padding:10px;
+    display:inline-block;
+}
+button.number, button.operator, button.clear{
+    width: 25px;
+}
+button.adv{
+    width:55px;
+    display:none;
+}
+.inputDisplay{
+    width:116px;
+    margin-bottom:5px;
+}
+button#compute{
+    width: 83px;
+}
+.styledButton{
+    background-color: #efefef;
+    border-radius:20px;
+}
